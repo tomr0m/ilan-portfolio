@@ -50,20 +50,70 @@ export default function Projects() {
             <motion.article
               key={project.name}
               variants={cardVariants}
-              className="group flex flex-col rounded-sm border border-[#1a1a1a] p-6 transition-colors duration-200 hover:border-[#333] hover:bg-[#0f0f0f]"
+              className={[
+                "group flex flex-col rounded-sm border p-6 transition-colors duration-200",
+                project.featured
+                  ? "border-t-white border border-[#2a2a2a] hover:border-t-white hover:border-[#444] hover:bg-[#0d0d0d] sm:col-span-2 lg:col-span-3 lg:flex-row lg:gap-10"
+                  : "border-[#1a1a1a] hover:border-[#333] hover:bg-[#0f0f0f]",
+              ].join(" ")}
             >
-              {/* Project name */}
-              <h3 className="mb-3 text-base font-semibold text-white transition-colors duration-200 group-hover:text-white">
-                {project.name}
-              </h3>
+              {/* Left column for featured (name + description + links) */}
+              <div className={project.featured ? "flex flex-col lg:w-1/2" : "flex flex-col flex-1"}>
+                {/* Featured badge + name */}
+                <div className="mb-3 flex items-center gap-3">
+                  {project.featured && (
+                    <span className="border border-[#333] px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest text-[#666]">
+                      Featured
+                    </span>
+                  )}
+                  <h3 className="text-base font-semibold text-white">
+                    {project.name}
+                  </h3>
+                </div>
 
-              {/* Description */}
-              <p className="mb-5 flex-1 text-sm leading-relaxed text-[#666]">
-                {project.description}
-              </p>
+                {/* Description */}
+                <p className="mb-5 flex-1 text-sm leading-relaxed text-[#666]">
+                  {project.description}
+                </p>
 
-              {/* Tags */}
-              <div className="mb-5 flex flex-wrap gap-1.5">
+                {/* Links */}
+                <div className="flex items-center gap-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.name} on GitHub`}
+                      className="flex items-center gap-1.5 text-xs text-[#555] transition-colors duration-150 hover:text-white"
+                    >
+                      <FiGithub size={14} />
+                      <span>Code</span>
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.name} live demo`}
+                      className="flex items-center gap-1.5 text-xs text-[#555] transition-colors duration-150 hover:text-white"
+                    >
+                      <FiExternalLink size={14} />
+                      <span>Live</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {/* Right column for featured: tags stacked vertically */}
+              <div
+                className={[
+                  "flex flex-wrap gap-1.5",
+                  project.featured
+                    ? "mt-5 lg:mt-0 lg:w-1/2 lg:content-start lg:self-start"
+                    : "mt-5",
+                ].join(" ")}
+              >
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -72,34 +122,6 @@ export default function Projects() {
                     {tag}
                   </span>
                 ))}
-              </div>
-
-              {/* Links */}
-              <div className="flex items-center gap-4">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.name} on GitHub`}
-                    className="flex items-center gap-1.5 text-xs text-[#555] transition-colors duration-150 hover:text-white"
-                  >
-                    <FiGithub size={14} />
-                    <span>Code</span>
-                  </a>
-                )}
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.name} live demo`}
-                    className="flex items-center gap-1.5 text-xs text-[#555] transition-colors duration-150 hover:text-white"
-                  >
-                    <FiExternalLink size={14} />
-                    <span>Live</span>
-                  </a>
-                )}
               </div>
             </motion.article>
           ))}
