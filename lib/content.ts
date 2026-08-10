@@ -1,8 +1,12 @@
 export const siteContent = {
   name: "Ilan Keselman",
-  title: "Full Stack Developer",
-  tagline: "Building real systems — end to end.",
+  title: "Full-Stack Developer | AI-Powered Applications",
+  tagline: "Building AI-powered systems — end to end.",
   location: "Israel",
+
+  // Used for meta/OG/Twitter descriptions only — the on-page About copy lives in `about.body`.
+  seoDescription:
+    "Full-Stack Developer focused on building real, working systems with AI at the core. I work with React, Node.js, TypeScript, Express.js, and the Claude API daily, building agentic workflows and LLM-powered features end to end, from database design to deployment.",
 
   email: "keselmanilan@gmail.com",
   github: "https://github.com/tomr0m",
@@ -17,7 +21,7 @@ export const siteContent = {
 
   about: {
     heading: "About Me",
-    body: "Full Stack Developer focused on building real, usable systems — from clean frontends to solid backend logic. I work with React, Node.js, Express.js, PHP, MySQL, and WordPress, and I actively integrate AI tools like Claude API, OpenAI API, Cursor, and GitHub Copilot into everything I build. I take full ownership of projects — from database design to deployment.",
+    body: "Full-Stack Developer focused on building real, usable systems with AI woven into the core, not bolted on. I work daily with React, Node.js, TypeScript, and the Claude API, and I actively build agentic workflows, tool calling, and LLM integrations using Claude Code, Cursor, and RAG/vector embeddings. I take full ownership of projects, from database design to deployment.",
   },
 
   projects: {

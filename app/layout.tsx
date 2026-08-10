@@ -11,9 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: `${siteContent.name} — ${siteContent.title}`,
-  description: siteContent.about.body,
+  description: siteContent.seoDescription,
   keywords: [
-    "Full Stack Developer",
+    "Full-Stack Developer",
+    "AI-Powered Applications",
+    "Claude API",
     "React",
     "Node.js",
     "Next.js",
@@ -23,8 +25,13 @@ export const metadata: Metadata = {
   authors: [{ name: siteContent.name }],
   openGraph: {
     title: `${siteContent.name} — ${siteContent.title}`,
-    description: siteContent.about.body,
+    description: siteContent.seoDescription,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteContent.name} — ${siteContent.title}`,
+    description: siteContent.seoDescription,
   },
 };
 

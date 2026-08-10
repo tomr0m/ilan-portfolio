@@ -7,7 +7,6 @@ export interface Project {
   featured?: boolean;
 }
 
-// TODO: replace each placeholder with a real project
 export const projects: Project[] = [
   {
     name: "TaskFlow",
@@ -29,21 +28,31 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    // TODO: replace with real project
-    name: "Project Two",
+    name: "RollLog",
     description:
-      "A short one-or-two sentence description of what this project does and the problem it solves.",
-    tags: ["Next.js", "Tailwind CSS", "Express.js"],
-    github: "https://github.com/tomr0m",
+      "BJJ training tracker with RPG-style progression and a built-in AI coach powered by the Claude API that analyzes training data and gives feedback.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Claude API",
+      "Supabase",
+      "Render",
+      "Vercel",
+    ],
+    // TODO: add RollLog repo URL
+    github: "",
+    // TODO: confirm live URL
     demo: "",
   },
   {
-    // TODO: replace with real project
-    name: "Project Three",
+    name: "Workflow",
     description:
-      "A short one-or-two sentence description of what this project does and the problem it solves.",
-    tags: ["PHP", "WordPress", "Claude API"],
-    github: "https://github.com/tomr0m",
+      "Meeting scheduling tool similar to Calendly — availability management, booking flow, and calendar sync.",
+    // TODO: confirm actual stack
+    tags: [],
+    // TODO: add Workflow repo URL
+    github: "",
     demo: "",
   },
 ];
