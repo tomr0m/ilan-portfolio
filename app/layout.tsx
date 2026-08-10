@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${siteContent.name} — ${siteContent.title}`,
+  title: `${siteContent.name} | ${siteContent.title}`,
   description: siteContent.seoDescription,
   keywords: [
     "Full-Stack Developer",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: siteContent.name }],
   openGraph: {
-    title: `${siteContent.name} — ${siteContent.title}`,
+    title: `${siteContent.name} | ${siteContent.title}`,
     description: siteContent.seoDescription,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteContent.name} — ${siteContent.title}`,
+    title: `${siteContent.name} | ${siteContent.title}`,
     description: siteContent.seoDescription,
   },
 };

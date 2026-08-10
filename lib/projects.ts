@@ -48,7 +48,7 @@ export const projects: Project[] = [
   {
     name: "Workflow",
     description:
-      "Meeting scheduling tool similar to Calendly — availability management, booking flow, and calendar sync.",
+      "Meeting scheduling tool similar to Calendly, with availability management, booking flow, and calendar sync.",
     // TODO: confirm actual stack
     tags: [],
     // TODO: add Workflow repo URL

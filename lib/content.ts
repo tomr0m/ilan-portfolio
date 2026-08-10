@@ -1,10 +1,10 @@
 export const siteContent = {
   name: "Ilan Keselman",
   title: "Full-Stack Developer | AI-Powered Applications",
-  tagline: "Building AI-powered systems — end to end.",
+  tagline: "Building AI-powered systems, end to end.",
   location: "Israel",
 
-  // Used for meta/OG/Twitter descriptions only — the on-page About copy lives in `about.body`.
+  // Used for meta/OG/Twitter descriptions only. On-page About copy lives in `about.body`.
   seoDescription:
     "Full-Stack Developer focused on building real, working systems with AI at the core. I work with React, Node.js, TypeScript, Express.js, and the Claude API daily, building agentic workflows and LLM-powered features end to end, from database design to deployment.",
 

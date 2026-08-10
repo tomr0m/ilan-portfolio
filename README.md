@@ -1,4 +1,4 @@
-# Ilan Keselman — Portfolio
+# Ilan Keselman Portfolio
 
 Personal developer portfolio built with Next.js 14 (App Router), Tailwind CSS, and Framer Motion.
 
@@ -44,13 +44,13 @@ All text copy is in `lib/content.ts`.
 Tech stack data is in `lib/skills.ts`.  
 Project cards are in `lib/projects.ts`.
 
-Edit those files — no need to touch components.
+Edit those files. No need to touch components.
 
 ---
 
 ## Deploying to Vercel
 
-### Option 1 — Vercel CLI (fastest)
+### Option 1: Vercel CLI (fastest)
 
 ```bash
 # Install Vercel CLI globally
@@ -63,12 +63,12 @@ vercel
 vercel --prod
 ```
 
-### Option 2 — GitHub Integration (recommended)
+### Option 2: GitHub Integration (recommended)
 
 1. Push your repo to GitHub (see commands below).
 2. Go to [vercel.com](https://vercel.com) → **Add New Project**.
 3. Import your GitHub repository.
-4. Leave all settings at default — Vercel auto-detects Next.js.
+4. Leave all settings at default. Vercel auto-detects Next.js.
 5. Click **Deploy**.
 
 Every push to `main` will auto-deploy.
@@ -94,7 +94,7 @@ Every push to `main` will auto-deploy.
 # 1. Create a new repo on GitHub (via gh CLI)
 gh repo create portfolio --public --source=. --remote=origin --push
 
-# — OR manually —
+# OR manually
 
 # 1a. Create repo at github.com/new, then:
 git remote add origin https://github.com/tomr0m/portfolio.git
